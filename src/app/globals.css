@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --orange-1: #f27930;
+    --gray-1: #8690a3;
+    --green-1: #5abf8b;
+    --green-2: #cef5e1;
+    --blue-1: #143a72;
+    --blue-2: #569bf8;
+    --blue-3: #4b7ef8;
+    --white-1: #fff;
+    --white-2: #f1f6fa;
+    --white-3: #fefefe;
+
+    --primary: var(var(--orange-1));
+    --secondary: var(var(--blue-1));
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white-3 text-foreground text-base leading-relaxed;
+  }
+  .line-b-bar {
+    @apply w-[100px] h-1 bg-orange-1;
+  }
+
+  @keyframes waveAnimation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .wave {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 28%;
+    background-color: #143a7220;
+    animation: waveAnimation 1.5s ease-out infinite;
+  }
 }

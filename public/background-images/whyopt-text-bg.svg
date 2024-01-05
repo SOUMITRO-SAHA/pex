@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="414" height="365" viewBox="0 0 414 365">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="Rectangle_3420" data-name="Rectangle 3420" transform="translate(0 2314)" style="fill:#fff"
+                d="M0 0h414v365H0z" />
+        </clipPath>
+        <style>
+            .cls-3,
+            .cls-5 {
+                fill: none
+            }
+
+            .cls-3 {
+                stroke: #143a72
+            }
+
+            .cls-4 {
+                stroke: none
+            }
+        </style>
+    </defs>
+    <g id="Mask_Group_74" data-name="Mask Group 74" transform="translate(0 -2314)" style="clip-path:url(#clip-path)">
+        <g id="Group_21718" data-name="Group 21718" transform="translate(242 -11)">
+            <g id="Group_23190" data-name="Group 23190">
+                <g id="Ellipse_779" data-name="Ellipse 779" class="cls-3" transform="translate(-494 1971)">
+                    <circle class="cls-4" cx="266.5" cy="266.5" r="266.5" />
+                    <circle class="cls-5" cx="266.5" cy="266.5" r="266" />
+                </g>
+                <g id="Ellipse_780" data-name="Ellipse 780" class="cls-3" transform="translate(-627 1838)">
+                    <circle class="cls-4" cx="399.5" cy="399.5" r="399.5" />
+                    <circle class="cls-5" cx="399.5" cy="399.5" r="399" />
+                </g>
+                <g id="Ellipse_781" data-name="Ellipse 781" class="cls-3" transform="translate(-377 2088)">
+                    <circle class="cls-4" cx="149.5" cy="149.5" r="149.5" />
+                    <circle class="cls-5" cx="149.5" cy="149.5" r="149" />
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
