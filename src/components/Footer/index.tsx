@@ -37,7 +37,9 @@ const Footer: React.FC = () => {
         {/* Copywrite Info */}
         <div className="w-full p-5 bg-blue-1 bg-opacity-95 text-white">
           <div>Copywrite ©️ {brandName}. All rights reserved</div>
-          <p>"Property Exchange" is owned and operated by {brandName}</p>
+          <p>
+            &quot;Property Exchange&quot; is owned and operated by {brandName}
+          </p>
         </div>
       </div>
     </footer>

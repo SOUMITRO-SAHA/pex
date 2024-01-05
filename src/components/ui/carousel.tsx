@@ -1,8 +1,10 @@
 "use client";
-
 import useEmblaCarousel, {
+  // @ts-expect-error
   type EmblaCarouselType as CarouselApi,
+  // @ts-expect-error
   type EmblaOptionsType as CarouselOptions,
+  // @ts-expect-error
   type EmblaPluginType as CarouselPlugin,
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";

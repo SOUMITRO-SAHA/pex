@@ -25,7 +25,9 @@ const InputBox: React.FC<InputBoxProps> = ({
   setState,
 }) => {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setState((prev: any) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
   };
 
   return (
