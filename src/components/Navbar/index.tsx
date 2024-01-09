@@ -25,13 +25,13 @@ const Navbar: React.FC = () => {
             {/* Brand Logo */}
             <div className="text-2xl font-bold">PEX</div>
 
-            {/* Button */}
+            {/* Button
             <div className="w-[120px] sm:w-[150px] md:w-[180px]">
               <PrimaryButton
                 label="Query Now"
                 onClick={() => setOpenQuickEnquiry(!openQuickEnquiry)}
               />
-            </div>
+            </div> */}
 
             {/* Menu Icon */}
             <div

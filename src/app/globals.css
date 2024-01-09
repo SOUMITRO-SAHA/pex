@@ -31,6 +31,18 @@
     @apply w-[100px] h-1 bg-orange-1;
   }
 
+  .section {
+    @apply py-10 md:py-16 lg:py-20;
+  }
+
+  .auto_gap {
+    @apply gap-1 md:gap-3 lg:gap-5;
+  }
+
+  .title {
+    @apply text-base md:text-lg lg:text-2xl font-semibold  capitalize;
+  }
+
   @keyframes waveAnimation {
     0% {
       transform: scale(1);

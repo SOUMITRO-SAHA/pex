@@ -14,7 +14,7 @@ const Qna: React.FC<QnaProps> = ({ question, answer, isOpen = false }) => {
   return (
     <div className="w-full bg-white rounded p-4 px-8 text-blue-1">
       <div className="w-full flex justify-between">
-        <div className="text-xl ">{question}</div>
+        <div className="text-base lg:text-xl">{question}</div>
 
         <div
           className="text-2xl cursor-pointer"
@@ -24,7 +24,9 @@ const Qna: React.FC<QnaProps> = ({ question, answer, isOpen = false }) => {
         </div>
       </div>
       {shoudShowAnswer && (
-        <div className="my-8 text-lg text-gray-1 font-[500]">{answer}</div>
+        <div className="my-8 text-sm lg:text-lg text-gray-1 font-[500]">
+          {answer}
+        </div>
       )}
     </div>
   );

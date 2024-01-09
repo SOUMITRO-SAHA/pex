@@ -27,11 +27,11 @@ const Card: React.FC<CardProps> = ({
         <Image
           src={icon}
           alt={specialMessage + "__icon"}
-          className={cn("w-6 h-6 sm:w-12 sm:h-12 md:w-20 md:h-20")}
+          className={cn("w-6 h-6 sm:w-12 sm:h-12 lg:w-20  lg:h-20")}
         />
       </div>
 
-      <div className="text-xs sm:text-md md:text-xl font-bold">{message}</div>
+      <div className="text-xs md:text-base lg:text-xl font-bold">{message}</div>
     </div>
   );
 };

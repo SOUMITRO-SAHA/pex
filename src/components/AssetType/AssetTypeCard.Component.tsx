@@ -18,21 +18,31 @@ const AssetTypeCard: React.FC<AssetTypeCardProps> = ({
   onClick,
 }) => {
   const active = "w-2 h-2 bg-blue-1 rounded-full";
+  const activeMobile = "bg-blue-1 text-white md:bg-white-1 md:text-black";
   return (
     <div
       key={id}
       className={cn(
-        "flex gap-5 items-center justify-between border p-3 px-5 rounded-2xl w-[300px] cursor-pointer bg-white-1 select-none",
-        id === state ? "shadow-xl" : ""
+        "flex gap-5 items-center justify-between border p-3 px-5 rounded-2xl max-w-[300px] cursor-pointer select-none",
+        id === state ? `shadow-xl ${activeMobile}` : ""
       )}
       onClick={onClick}
     >
-      <div className="flex gap-5 items-center ">
-        <Image src={icon} alt={label} className="w-8 h-8 md:w-16 md:h-16" />
-        <div className="text-lg md:text-xl">{label}</div>
+      <div className={cn("flex gap-5 items-center")}>
+        <Image
+          src={icon}
+          alt={label}
+          className={cn(
+            "w-10 h-10 lg:w-16 lg:h-16",
+            id === state
+              ? "bg-blue-2 rounded-full p-1 md:p-0 md:bg-white-1 md:rounded-none"
+              : ""
+          )}
+        />
+        <div className="text-base md:text-xl">{label}</div>
       </div>
 
-      <div className="border-2 rounded-full border-blue-1 w-2 h-2 sm:w-4 sm:h-4 flex justify-center items-center">
+      <div className="hidden md:flex border-2 rounded-full border-blue-1 w-2 h-2 sm:w-4 sm:h-4  justify-center items-center">
         <div className={cn(id === state ? active : "")} />
       </div>
     </div>

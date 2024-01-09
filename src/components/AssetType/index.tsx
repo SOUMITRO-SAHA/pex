@@ -56,34 +56,34 @@ const AssetType: React.FC = () => {
   };
 
   return (
-    <section className="bg-white mt-16 py-10">
-      <div className="text-xl font-semibold text-center mb-10">
-        Choose your Asset Type
-      </div>
+    <section className="bg-white mt-4 md:mt-8 lg:mt-16 py-10">
+      <div className="title text-center mb-10">Choose your Asset Type</div>
       {/* Option Type */}
-      <div className="flex justify-center gap-12 items-center container mx-auto max-w-7xl">
-        <AssetTypeCard
-          id={1}
-          label="Retail"
-          icon={Rent}
-          state={selectedTab}
-          onClick={() => setSelectedTab(1)}
-        />
-        <AssetTypeCard
-          id={2}
-          label="Office"
-          icon={Office}
-          state={selectedTab}
-          onClick={() => setSelectedTab(2)}
-        />
+      <div className="container mx-auto max-w-7xl">
+        <div className="flex justify-center gap-5 md:gap-12 items-center">
+          <AssetTypeCard
+            id={1}
+            label="Retail"
+            icon={Rent}
+            state={selectedTab}
+            onClick={() => setSelectedTab(1)}
+          />
+          <AssetTypeCard
+            id={2}
+            label="Office"
+            icon={Office}
+            state={selectedTab}
+            onClick={() => setSelectedTab(2)}
+          />
+        </div>
       </div>
 
-      <div className="container mx-auto max-w-7xl mt-12 border p-5 py-10 md:p-16 rounded-2xl bg-blue-1 text-white">
-        <div className="flex flex-col gap-10 md:grid md:grid-cols-12 xxl:gap-20">
+      <div className="container mx-auto max-w-7xl mt-8 lg:mt-12 border p-5 lg:p-16 rounded-2xl bg-blue-1 text-white">
+        <div className="flex flex-col gap-5 md:grid md:grid-cols-12 xxl:gap-20">
           {/* Form */}
-          <form className="order-2 md:order-none col-span-full grid grid-cols-12 gap-5 md:gap-10 md:col-span-6 overflow-hidden">
+          <form className="order-2 md:order-none col-span-full grid grid-cols-12 gap-5 md:gap-10 md:col-span-6 overflow-hidden text-sm md:text-base">
             {/* Name */}
-            <div className="col-span-full flex flex-col gap-2">
+            <div className="col-span-full flex flex-col gap-2 ">
               <div>Name</div>
               <InputBox
                 type="text"
@@ -131,19 +131,19 @@ const AssetType: React.FC = () => {
 
           {/* Image */}
           <div className="col-span-full w-full md:col-span-6 overflow-hidden">
-            <div className="w-full h-[20rem]  rounded-2xl shadow flex justify-center items-center object-fill">
+            <div className="w-full rounded-2xl shadow flex justify-center items-center object-fill">
               {selectedTab === 1 && (
                 <Image
                   src={RentalLarge1}
                   alt="Retail Image"
-                  className="object-contain rounded-2xl"
+                  className="object-contain rounded-2xl h-[10rem] md:h-[20rem]"
                 />
               )}
               {selectedTab === 2 && (
                 <Image
                   src={OfficeLarge1}
                   alt="Office Image"
-                  className="object-fill rounded-2xl "
+                  className="object-contain rounded-2xl h-[10rem] md:h-[20rem]"
                 />
               )}
             </div>

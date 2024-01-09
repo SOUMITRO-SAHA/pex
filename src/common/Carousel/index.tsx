@@ -43,15 +43,25 @@ const MainCarousel: React.FC<MainCarouselProps> = ({ options }) => {
                   <div className="overflow-hidden object-contain">
                     <ImageCarousel images={[image1, image2]} title={title} />
                   </div>
-                  <h3 className="text-2xl text-white font-bold">{name}</h3>
+                  <h3 className="text-base md:text-lg lg:text-2xl text-white font-bold">
+                    {name}
+                  </h3>
                 </div>
 
                 {/* Tooltip/Overlay */}
                 <div className="hidden group-hover:flex absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 p-4 rounded text-white justify-center items-center flex-col">
-                  <h3 className="text-2xl text-white font-semibold">{name}</h3>
-                  <p className="text-lg">Location: {location}</p>
-                  <p className="text-lg">Investment: {investment}</p>
-                  <p className="text-lg">Rental: {rental}</p>
+                  <h3 className="text-base md:text-lg lg:text-2xl text-white font-semibold">
+                    {name}
+                  </h3>
+                  <p className="text-sm md:text-base lg:text-lg">
+                    Location: {location}
+                  </p>
+                  <p className="text-sm md:text-base lg:text-lg">
+                    Investment: {investment}
+                  </p>
+                  <p className="text-sm md:text-base lg:text-lg">
+                    Rental: {rental}
+                  </p>
                 </div>
               </div>
             </CarouselItem>

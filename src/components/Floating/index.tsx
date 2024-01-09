@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
@@ -21,29 +22,29 @@ const Floating: React.FC = () => {
     <section className="fixed left-3 bottom-10 flex flex-col gap-5 select-none">
       {/* Email */}
       <div
-        className="relative text-2xl bg-black text-yellow-300 rounded-2xl p-4 cursor-pointer blink"
+        className="relative bg-black text-yellow-300 rounded-xl lg:rounded-2xl p-4 cursor-pointer blink"
         onClick={openEmail}
       >
         <div className="wave" />
-        <MdEmail />
+        <MdEmail className={cn("text-sm md:text-xl xl:text-2xl")} />
       </div>
 
       {/* What's APP */}
       <div
-        className="relative text-2xl bg-green-500 text-white rounded-2xl p-4 cursor-pointer blink"
+        className="relative bg-green-500 text-white rounded-xl lg:rounded-2xl p-4 cursor-pointer blink"
         onClick={openWhatsApp}
       >
         <div className="wave" />
-        <FaWhatsapp />
+        <FaWhatsapp className={cn("text-sm md:text-xl xl:text-2xl")} />
       </div>
 
       {/* Phone */}
       <div
-        className="relative text-2xl bg-blue-1 text-white rounded-2xl p-4 cursor-pointer blink"
+        className="relative bg-blue-1 text-white rounded-xl lg:rounded-2xl p-4 cursor-pointer blink"
         onClick={openPhone}
       >
         <div className="wave" />
-        <FaPhoneVolume />
+        <FaPhoneVolume className={cn("text-sm md:text-xl xl:text-2xl")} />
       </div>
     </section>
   );

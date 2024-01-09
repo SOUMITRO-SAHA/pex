@@ -4,12 +4,10 @@ import Qna from "./Qna.Component";
 
 const FAQ: React.FC = () => {
   return (
-    <section className="bg-white-2 py-24">
+    <section className="bg-white-2 section">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col gap-5 justify-center items-center">
-          <div className="text-2xl font-semibold text-blue-1">
-            Frequently Asked Question
-          </div>
+        <div className="flex flex-col auto_gap justify-center items-center">
+          <div className="title text-blue-1">Frequently Asked Question</div>
           <div className="line-b-bar" />
         </div>
         <div className="mt-12 flex flex-col gap-5">
