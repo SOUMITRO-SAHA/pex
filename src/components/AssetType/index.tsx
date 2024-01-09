@@ -61,7 +61,7 @@ const AssetType: React.FC = () => {
         Choose your Asset Type
       </div>
       {/* Option Type */}
-      <div className="flex flex-wrap justify-center gap-12 items-center container mx-auto max-w-7xl">
+      <div className="flex justify-center gap-12 items-center container mx-auto max-w-7xl">
         <AssetTypeCard
           id={1}
           label="Retail"
@@ -78,10 +78,10 @@ const AssetType: React.FC = () => {
         />
       </div>
 
-      <div className="flex flex-col md:grid md:grid-cols-12 gap-20 container mx-auto max-w-7xl mt-12 border p-5 py-10 md:p-16 rounded-2xl bg-blue-1 text-white">
-        {/* Form */}
-        <form className="order-2 md:order-none w-full md:col-span-6 overflow-hidden">
-          <div className="grid grid-cols-12 gap-10 max-w-full">
+      <div className="container mx-auto max-w-7xl mt-12 border p-5 py-10 md:p-16 rounded-2xl bg-blue-1 text-white">
+        <div className="flex flex-col gap-10 md:grid md:grid-cols-12 xxl:gap-20">
+          {/* Form */}
+          <form className="order-2 md:order-none col-span-full grid grid-cols-12 gap-5 md:gap-10 md:col-span-6 overflow-hidden">
             {/* Name */}
             <div className="col-span-full flex flex-col gap-2">
               <div>Name</div>
@@ -118,6 +118,7 @@ const AssetType: React.FC = () => {
               />
             </div>
 
+            {/* Button */}
             <div className="col-span-full md:col-span-4">
               <PrimaryButton
                 label="Submit"
@@ -126,26 +127,26 @@ const AssetType: React.FC = () => {
                 loading={loading}
               />
             </div>
-          </div>
-        </form>
+          </form>
 
-        {/* Image */}
-        <div className="md:order-none w-full md:col-span-6 overflow-hidden">
-          <div className="w-full h-[20rem]  rounded-2xl shadow flex justify-center items-center object-fill">
-            {selectedTab === 1 && (
-              <Image
-                src={RentalLarge1}
-                alt="Retail Image"
-                className="object-contain rounded-2xl"
-              />
-            )}
-            {selectedTab === 2 && (
-              <Image
-                src={OfficeLarge1}
-                alt="Office Image"
-                className="object-fill rounded-2xl "
-              />
-            )}
+          {/* Image */}
+          <div className="col-span-full w-full md:col-span-6 overflow-hidden">
+            <div className="w-full h-[20rem]  rounded-2xl shadow flex justify-center items-center object-fill">
+              {selectedTab === 1 && (
+                <Image
+                  src={RentalLarge1}
+                  alt="Retail Image"
+                  className="object-contain rounded-2xl"
+                />
+              )}
+              {selectedTab === 2 && (
+                <Image
+                  src={OfficeLarge1}
+                  alt="Office Image"
+                  className="object-fill rounded-2xl "
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

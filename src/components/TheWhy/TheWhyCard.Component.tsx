@@ -22,19 +22,23 @@ const TheWhyCard: React.FC<TheyWhyCardProps> = ({
   return (
     <div
       className={cn(
-        "bg-white flex flex-col justify-center items-center p-8 rounded-xl w-[250px] shadow",
+        "bg-white flex flex-col justify-center items-center p-8 rounded-xl w-full sm:w-[250px] shadow",
         className
       )}
     >
       {/* Icon */}
-      <div className="h-20 w-20 bg-white-2 rounded-full flex justify-center items-center text-3xl text-blue-1">
+      <div className="h-16 w-16 sm:h-20 sm:w-20 bg-white-2 rounded-full flex justify-center items-center text-3xl text-blue-1">
         {getIcon(icon)}
       </div>
 
       {/* Title */}
-      <div className="mt-6 text-center text-xl font-semibold">{title}</div>
+      <div className="mt-6 text-center text-lg sm:text-xl font-semibold">
+        {title}
+      </div>
       {/* Subtible */}
-      <p className="mt-4 text-center text-gray-1 font-semibold">{subtitle}</p>
+      <p className="mt-4 text-center text-gray-1 text-sm sm:text-lg font-semibold">
+        {subtitle}
+      </p>
     </div>
   );
 };

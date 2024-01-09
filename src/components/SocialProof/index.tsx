@@ -22,9 +22,21 @@ const SocialProof: React.FC = () => {
 
         {/* Cards */}
         <div className="col-span-full w-full grid grid-cols-12 gap-4 mt-12">
-          <SocialProofFeaturedCard line1="1000+" line2="Registered Customers" />
-          <SocialProofFeaturedCard line1="500+" line2="Premium Properties" />
-          <SocialProofFeaturedCard line1="1200+" line2="Rent Properties" />
+          <SocialProofFeaturedCard
+            line1="1000+"
+            line2="Registered Customers"
+            className="col-span-6 sm:col-span-4"
+          />
+          <SocialProofFeaturedCard
+            line1="500+"
+            line2="Premium Properties"
+            className="col-span-6 sm:col-span-4"
+          />
+          <SocialProofFeaturedCard
+            line1="1200+"
+            line2="Rent Properties"
+            className="col-span-full sm:col-span-4"
+          />
         </div>
 
         {/* Message */}
@@ -40,15 +52,24 @@ const SocialProof: React.FC = () => {
 interface SocialProofFeaturedCardProps {
   line1: string;
   line2: string;
+  className?: string;
 }
 const SocialProofFeaturedCard: React.FC<SocialProofFeaturedCardProps> = ({
   line1,
   line2,
+  className,
 }) => {
   return (
-    <div className="col-span-6 md:col-span-4 bg-white py-12  md:py-24 px-10 rounded-xl flex flex-col gap-3 justify-center items-center">
+    <div
+      className={cn(
+        "bg-white py-12  md:py-24 px-10 rounded-xl flex flex-col gap-3 justify-center items-center",
+        className
+      )}
+    >
       <div className="text-2xl text-blue-1 font-bold">{line1}</div>
-      <div className="text-orange-1 text-lg text-center">{line2}</div>
+      <div className="text-orange-1 text-md md:text-lg lg:text-xl text-center">
+        {line2}
+      </div>
     </div>
   );
 };

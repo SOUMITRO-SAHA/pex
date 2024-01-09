@@ -80,11 +80,11 @@ const PopupComponent: React.FC<PopupProps> = ({ isOpen, onClose }) => {
       <div
         className={cn(
           getPopupStyle(isOpen),
-          "bg-blue-1 text-white rounded w-[450px]"
+          "bg-blue-1 text-white rounded w-full md:w-[450px]"
         )}
       >
         <CloseButton onClose={onClose} />
-        <div className="">
+        <div className="mt-6 md:mt-0">
           {/* Message */}
           <h3 className="text-2xl text-orange-1 font-semibold w-full">
             Enquire Now and Get 5GMs Gold Free!!

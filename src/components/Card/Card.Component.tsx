@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
     <div
       key={id}
       className={cn(
-        "flex flex-col gap-5 justify-center items-center bg-white-2 p-8 rounded-2xl text-center",
+        "flex flex-col gap-5 justify-center items-center bg-white-2 p-3 sm:p-8 rounded-2xl text-center",
         className
       )}
     >
@@ -27,11 +27,11 @@ const Card: React.FC<CardProps> = ({
         <Image
           src={icon}
           alt={specialMessage + "__icon"}
-          className={cn("w-12 h-12 md:w-20 md:h-20")}
+          className={cn("w-6 h-6 sm:w-12 sm:h-12 md:w-20 md:h-20")}
         />
       </div>
 
-      <div className="text-2xl font-bold">{message}</div>
+      <div className="text-xs sm:text-md md:text-xl font-bold">{message}</div>
     </div>
   );
 };

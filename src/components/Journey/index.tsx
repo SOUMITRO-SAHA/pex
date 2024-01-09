@@ -16,11 +16,11 @@ const InvestmentJourney: React.FC = () => {
       </div>
       <div className="flex justify-center items-center mt-6">
         {/* Tab Section */}
-        <div className="gap-10 capitalize flex items-center">
-          <div className={cn(generalTabStyle, active, "p-2 px-10")}>
+        <div className="gap-10 capitalize flex flex-col mt-6 md:my-3 md:flex-row justify-center items-center text-center">
+          <div className={cn(generalTabStyle, active, "p-2 px-10 w-[200px]")}>
             Raj&apos;s story
           </div>
-          <div className={cn(generalTabStyle, "p-2 px-10")}>
+          <div className={cn(generalTabStyle, "p-2 px-10 w-[200px]")}>
             Ankita&apos;s story
           </div>
         </div>

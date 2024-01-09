@@ -58,8 +58,8 @@ const MainCarousel: React.FC<MainCarouselProps> = ({ options }) => {
           )
         )}
       </CarouselContent>
-      <CarouselPrevious className="text-orange-1 hover:text-white-2" />
-      <CarouselNext className="text-orange-1 hover:text-white-2 text-2xl" />
+      <CarouselPrevious className="text-orange-1 hover:text-white-2 -left-8 md:-left-9" />
+      <CarouselNext className="text-orange-1 hover:text-white-2 text-2xl -right-8 md:-right-9" />
     </Carousel>
   );
 };

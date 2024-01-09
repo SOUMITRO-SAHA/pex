@@ -26,10 +26,12 @@ const Navbar: React.FC = () => {
             <div className="text-2xl font-bold">PEX</div>
 
             {/* Button */}
-            <PrimaryButton
-              label="Query Now"
-              onClick={() => setOpenQuickEnquiry(!openQuickEnquiry)}
-            />
+            <div className="w-[120px] sm:w-[150px] md:w-[180px]">
+              <PrimaryButton
+                label="Query Now"
+                onClick={() => setOpenQuickEnquiry(!openQuickEnquiry)}
+              />
+            </div>
 
             {/* Menu Icon */}
             <div

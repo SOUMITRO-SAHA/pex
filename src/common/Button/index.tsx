@@ -19,7 +19,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
     <Button
       variant={"default"}
       className={cn(
-        "bg-primary-1 text-white rounded hover:bg-primary-1 hover:text-secondary-1",
+        "bg-primary-1 text-white rounded hover:bg-primary-1 hover:text-secondary-1 w-full text-center",
         className
       )}
       // @ts-expect-error
