@@ -6,6 +6,8 @@ import { EmailOptions, sendQuickMail } from "@/lib/mail_sender";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { CoinIcon } from "../../../public/icon";
+import Image from "next/image";
 
 interface PopupProps {
   isOpen: boolean;
@@ -22,7 +24,7 @@ const PopupComponent: React.FC<PopupProps> = ({ isOpen, onClose }) => {
     name: "",
     phoneNumber: "+91",
   });
-  const [countdown, setCountdown] = useState<number>(30 * 60);
+  const [countdown, setCountdown] = useState<number>(3.5 * 60 * 60);
   const [currentDay, setCurrentDay] = useState<number>(0);
   const [currentHours, setCurrentHours] = useState<number>(0);
   const [currentMinutes, setCurrentMinutes] = useState<number>(0);
@@ -78,65 +80,75 @@ const PopupComponent: React.FC<PopupProps> = ({ isOpen, onClose }) => {
   return (
     <div className={cn(getOverlayStyle(isOpen))}>
       <div
+        style={{
+          backgroundImage: `url()`,
+        }}
         className={cn(
           getPopupStyle(isOpen),
-          "bg-blue-1 text-white rounded w-full md:w-[450px]"
+          "bg-blue-1 text-white rounded w-[90%] h-[75%] lg:w-[450px] flex flex-col justify-center items-center"
         )}
       >
         <CloseButton onClose={onClose} />
         <div className="mt-6 md:mt-0">
           {/* Message */}
-          <h3 className="text-2xl text-orange-1 font-semibold w-full">
-            Enquire Now and Get 5GMs Gold Free!!
+          <h3 className="text-lg lg:text-2xl text-center font-bold uppercase text-yellow-300 w-full">
+            Don&apos;t Miss Out
           </h3>
 
+          <div className="flex justify-center items-center">
+            <Image
+              src={CoinIcon}
+              alt=""
+              className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px]"
+            />
+          </div>
+
+          <div className="text-2xl lg:text-3xl text-center font-[600]">
+            Enquire Now and Get 🪙
+            <div className="inline-block px-2 ">
+              <div>5GMs</div>
+              <div className="h-1 w-full bg-white rounded-full" />
+            </div>
+            🪙 Gold Free!!
+          </div>
+
           {/* Timer Section */}
-          <div className="text-center text-lg w-full">
+          <div className="text-center text-sm w-full text-black">
             {countdown > 0 ? (
-              <div className="flex justify-center items-center gap-10 mt-6 w-full">
+              <div className="flex justify-center items-center gap-3 mt-6 w-full">
                 {currentDay > 0 && (
                   <>
-                    <div className="flex flex-col gap-2">
-                      <div>Days</div>
-                      <div className="p-3 rounded bg-white text-orange-1 font-bold text-xl">
+                    <div className="flex flex-col gap-2 w-[55px] h-[65px] justify-center items-center bg-white rounded">
+                      <span className="text-lg text-red-500 font-bold">
                         {currentDay}
-                      </div>
+                      </span>
+                      <span className="uppercase">Days</span>
                     </div>
-                    <span className="text-orange-1 font-bold text-3xl text-center items-center align-middle mt-7">
-                      :
-                    </span>
                   </>
                 )}
                 {currentHours > 0 && (
                   <>
-                    <div className="flex flex-col gap-2">
-                      <div>Hours</div>
-                      <div className="p-3 rounded bg-white text-orange-1 font-bold text-xl">
+                    <div className="flex flex-col gap-2 w-[55px] h-[65px] justify-center items-center bg-white rounded">
+                      <span className="text-lg text-red-500 font-bold">
                         {currentHours}
-                      </div>
+                      </span>
+                      <span className="uppercase">Hrs</span>
                     </div>
-                    <span className="text-orange-1 font-bold text-3xl text-center items-center align-middle mt-7">
-                      :
-                    </span>
                   </>
                 )}
-                <>
-                  <div className="flex flex-col gap-2">
-                    <div>Minutes</div>
-                    <div className="p-3 rounded bg-white text-orange-1 font-bold text-xl">
-                      {currentMinutes}
-                    </div>
-                  </div>
-                  <span className="text-orange-1 font-bold text-3xl text-center items-center align-middle mt-7">
-                    :
-                  </span>
-                </>
 
-                <div className="flex flex-col gap-2">
-                  <div>Seconds</div>
-                  <div className="p-3 rounded bg-white text-orange-1 font-bold text-xl">
+                <div className="flex flex-col gap-2 w-[55px] h-[65px] justify-center items-center bg-white rounded">
+                  <span className="text-lg text-red-500 font-bold">
+                    {currentMinutes}
+                  </span>
+                  <span className="uppercase">Min</span>
+                </div>
+
+                <div className="flex flex-col gap-2 w-[55px] h-[65px] justify-center items-center bg-white rounded">
+                  <span className="text-lg text-red-500 font-bold">
                     {currentSeconds}
-                  </div>
+                  </span>
+                  <span className="uppercase">Sec</span>
                 </div>
               </div>
             ) : (
@@ -147,8 +159,8 @@ const PopupComponent: React.FC<PopupProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        <div className="mt-8 my-6 flex flex-col gap-10">
-          <div className="flex flex-col gap-5">
+        <div className="my-6 flex flex-col gap-5">
+          <div className="flex gap-2">
             {/* Name */}
             <div>
               <div>Name</div>
@@ -173,7 +185,6 @@ const PopupComponent: React.FC<PopupProps> = ({ isOpen, onClose }) => {
               />
             </div>
           </div>
-
           {/* Button */}
           <PrimaryButton label="Query Now" onClick={handlePopupQuerySubmit} />
         </div>
