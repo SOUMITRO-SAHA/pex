@@ -65,6 +65,12 @@
     @apply rounded-r-xl;
   }
 
+  .social-message {
+  }
+  .social-message > div {
+    height: 4rem;
+  }
+
   @keyframes waveAnimation {
     0% {
       transform: scale(1);

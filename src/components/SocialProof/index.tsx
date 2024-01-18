@@ -6,10 +6,10 @@ import { HalfStarIcon, StarIcon } from "../../../public/icon";
 
 const SocialProof: React.FC = () => {
   return (
-    <section className="bg-socialProof bg-left-top bg-no-repeat bg-white-2 section">
-      <div className="container mx-auto max-w-7xl grid grid-cols-12">
+    <section className="bg-socialProof bg-left-top bg-no-repeat bg-white-2 py-5">
+      <div className="md:container md:mx-auto md:max-w-7xl grid grid-cols-12">
         {/* Info */}
-        <div className="col-span-full flex gap-5 justify-center items-center flex-col">
+        <div className="col-span-full flex gap-1 justify-center items-center flex-col">
           <div className="title">We are Rated</div>
           <div className="text-base flex gap-2 items-center">
             <Image src={StarIcon} alt="" className="w-6 h-6 lg:w-10 lg:h-10" />
@@ -25,11 +25,11 @@ const SocialProof: React.FC = () => {
         </div>
 
         {/* Cards */}
-        <div className="col-span-full w-full grid grid-cols-12 gap-4 mt-12">
+        <div className="col-span-full w-full lg:grid lg:grid-cols-12 lg:gap-4 lg:mt-12 my-5 flex justify-between items-center social-message">
           <SocialProofFeaturedCard
             line1="1000+"
             line2="Registered Customers"
-            className="col-span-4 md:col-span-4"
+            className="col-span-4 md:col-span-4 border-r border-gray-500"
           />
           <SocialProofFeaturedCard
             line1="500+"
@@ -39,12 +39,12 @@ const SocialProof: React.FC = () => {
           <SocialProofFeaturedCard
             line1="1200+"
             line2="Rent Properties"
-            className="col-span-4 md:col-span-4"
+            className="col-span-4 md:col-span-4 border-l border-gray-500"
           />
         </div>
 
         {/* Message */}
-        <div className="col-span-full text-center mt-10 text-gray-1 font-semibold text-sm md:text-lg">
+        <div className="col-span-full text-center text-gray-1 font-semibold text-xs md:text-lg">
           {brandName} is one of the india&apos;s leading Property Exchange
           Platform
         </div>
@@ -66,7 +66,7 @@ const SocialProofFeaturedCard: React.FC<SocialProofFeaturedCardProps> = ({
   return (
     <div
       className={cn(
-        "bg-white py-6  md:py-24 px-10 rounded-xl flex flex-col gap-3 justify-center items-center",
+        "w-full flex flex-col gap-1 justify-center items-center",
         className
       )}
     >

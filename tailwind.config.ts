@@ -95,6 +95,7 @@ const config = {
       },
       backgroundImage: {
         socialProof: 'url("/background-images/whyopt-text-bg.svg")',
+        pattern1: 'url("/pattern/pattern1.svg")',
       },
     },
   },
