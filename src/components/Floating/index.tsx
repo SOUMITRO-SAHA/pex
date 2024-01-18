@@ -19,7 +19,7 @@ const Floating: React.FC = () => {
   };
 
   return (
-    <section className="fixed left-3 bottom-10 flex flex-col gap-5 select-none">
+    <section className="z-10 fixed left-3 bottom-10 flex flex-col gap-5 select-none">
       {/* Email */}
       <div
         className="relative bg-black text-yellow-300 rounded-xl lg:rounded-2xl p-4 cursor-pointer blink"

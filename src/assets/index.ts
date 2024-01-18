@@ -7,7 +7,6 @@ import {
   FaFileAlt,
   FaFileSignature,
   FaGavel,
-  FaHandsHelping,
   FaKey,
   FaSignOutAlt,
 } from "react-icons/fa";

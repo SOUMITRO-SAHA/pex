@@ -20,7 +20,7 @@ import {
 export const getOverlayStyle = (isOpen = false) => {
   const overlayClasses = cn(
     isOpen
-      ? "h-screen w-screen fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out z-10"
+      ? "h-screen w-screen fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out z-50"
       : "hidden"
   );
 
@@ -86,8 +86,8 @@ export const CarouselOptions: CarouselOptionsType[] = [
   },
   {
     id: 5,
-    image1: RelianceDegitalCard1,
-    image2: RelianceDegitalCard2,
+    image1: RelianceDegitalCard2,
+    image2: RelianceDegitalCard1,
     name: "Reliance Digital",
     location: "Sector 133, Noida",
     investment: "3.64 Cr",

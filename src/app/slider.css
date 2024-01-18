@@ -1,0 +1,45 @@
+.productSlider .swiper-pagination-bullet {
+  background: #23262f;
+}
+
+.productSlider .swiper-button-prev,
+.productSlider .swiper-button-next {
+  background: #23262f;
+  box-shadow: 0px 4px 10px rgba(15, 27, 51, 0.1);
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.productSlider .swiper-button-prev:hover,
+.productSlider .swiper-button-next:hover {
+  background: #569bf8;
+  transition: all 0.25s ease-in-out;
+}
+
+.productSlider .swiper-button-prev {
+  left: 1%;
+}
+.productSlider .swiper-button-next {
+  right: 1%;
+}
+
+.productSlider .swiper-button-prev:after,
+.productSlider .swiper-button-next:after {
+  font-size: 16px;
+  color: white;
+}
+
+.productSlider .swiper-pagination {
+  bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .productSlider .swiper-button-prev,
+  .productSlider .swiper-button-next,
+  .productSlider .swiper-pagination {
+    display: none;
+  }
+}

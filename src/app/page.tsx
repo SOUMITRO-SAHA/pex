@@ -7,7 +7,6 @@ import InvestmentJourney from "@/components/Journey";
 import Popup from "@/components/Popup";
 import PropertyCard from "@/components/PropertyCard";
 import SocialProof from "@/components/SocialProof";
-import Tesing from "@/components/Testing";
 import TheWhy from "@/components/TheWhy";
 
 export default function Home() {
