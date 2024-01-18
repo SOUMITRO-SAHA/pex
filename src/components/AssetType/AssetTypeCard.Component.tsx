@@ -23,7 +23,7 @@ const AssetTypeCard: React.FC<AssetTypeCardProps> = ({
     <div
       key={id}
       className={cn(
-        "flex gap-5 items-center justify-between border p-3 px-5 rounded-2xl max-w-[300px] cursor-pointer select-none",
+        "flex gap-5 items-center justify-between border p-2 px-5 rounded-xl w-full max-w-[300px] cursor-pointer select-none",
         id === state ? `shadow-xl ${activeMobile}` : ""
       )}
       onClick={onClick}

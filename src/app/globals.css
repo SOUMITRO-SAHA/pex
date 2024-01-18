@@ -47,6 +47,24 @@
     @apply text-base md:text-lg lg:text-2xl font-semibold  capitalize;
   }
 
+  .radio-group {
+    width: 100%;
+    display: flex;
+  }
+  .radio-group > label {
+    width: 100%;
+    cursor: pointer;
+    @apply min-h-[2.625rem] bg-white;
+  }
+
+  .rounded-left {
+    @apply rounded-l-xl;
+  }
+
+  .rounded-right {
+    @apply rounded-r-xl;
+  }
+
   @keyframes waveAnimation {
     0% {
       transform: scale(1);

@@ -57,10 +57,10 @@ const AssetType: React.FC = () => {
 
   return (
     <section className="bg-white mt-4 md:mt-8 lg:mt-16 py-10">
-      <div className="title text-center mb-10">Choose your Asset Type</div>
+      <div className="title text-center mb-5">Choose your Asset Type</div>
       {/* Option Type */}
-      <div className="container mx-auto max-w-7xl">
-        <div className="flex justify-center gap-5 md:gap-12 items-center">
+      <div className="w-full">
+        <div className="flex justify-between lg:justify-center gap-5 md:gap-12 items-center">
           <AssetTypeCard
             id={1}
             label="Retail"
@@ -78,77 +78,80 @@ const AssetType: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-7xl mt-8 lg:mt-12 border p-5 lg:p-16 rounded-2xl bg-blue-1 text-white">
-        <div className="flex flex-col gap-5 md:grid md:grid-cols-12 xxl:gap-20">
-          {/* Form */}
-          <form className="order-2 md:order-none col-span-full grid grid-cols-12 gap-5 md:gap-10 md:col-span-6 overflow-hidden text-sm md:text-base">
-            {/* Name */}
-            <div className="col-span-full flex flex-col gap-2 ">
-              <div>Name</div>
-              <InputBox
-                type="text"
-                name="name"
-                placeholder="Type Name"
-                state={formData?.name}
-                setState={setFormData}
-              />
-            </div>
+      <div className="bg-pattern1 container mx-auto max-w-7xl mt-5 lg:mt-12 border p-5 lg:p-16 rounded-2xl bg-blue-1 text-white">
+        {/* Form */}
+        <form className="order-2 md:order-none col-span-full grid grid-cols-12 gap-5 md:gap-10 md:col-span-6 overflow-hidden text-sm md:text-base">
+          {/* Name */}
+          <div className="col-span-full flex flex-col">
+            <div>Name</div>
+            <InputBox
+              type="text"
+              name="name"
+              placeholder="Type Name"
+              state={formData?.name}
+              setState={setFormData}
+            />
+          </div>
 
-            {/* Phone Number */}
-            <div className="col-span-full md:col-span-6">
-              <div>Phone Number</div>
-              <InputBox
-                type="text"
-                name="phoneNumber"
-                placeholder="Type Phone Number"
-                state={formData?.phoneNumber}
-                setState={setFormData}
-              />
-            </div>
+          {/* Phone Number */}
+          <div className="col-span-full md:col-span-6">
+            <div>Phone Number</div>
+            <InputBox
+              type="text"
+              name="phoneNumber"
+              placeholder="Type Phone Number"
+              state={formData?.phoneNumber}
+              setState={setFormData}
+            />
+          </div>
 
-            {/* Budget */}
-            <div className="col-span-full md:col-span-6">
-              <div>Budget</div>
-              <InputBox
-                type="text"
-                name="budget"
-                placeholder="Type Name"
-                state={formData?.budget}
-                setState={setFormData}
-              />
-            </div>
-
-            {/* Button */}
-            <div className="col-span-full md:col-span-4">
-              <PrimaryButton
-                label="Submit"
-                className={cn("w-full")}
-                onClick={handleSubmit}
-                loading={loading}
-              />
-            </div>
-          </form>
-
-          {/* Image */}
-          <div className="col-span-full w-full md:col-span-6 overflow-hidden">
-            <div className="w-full rounded-2xl shadow flex justify-center items-center object-fill">
-              {selectedTab === 1 && (
-                <Image
-                  src={RentalLarge1}
-                  alt="Retail Image"
-                  className="object-contain rounded-2xl h-[10rem] md:h-[20rem]"
-                />
-              )}
-              {selectedTab === 2 && (
-                <Image
-                  src={OfficeLarge1}
-                  alt="Office Image"
-                  className="object-contain rounded-2xl h-[10rem] md:h-[20rem]"
-                />
-              )}
+          {/* Budget */}
+          <div className="col-span-full md:col-span-6 flex flex-col gap-1">
+            <div>Budget</div>
+            <div className="border-gray-500 radio-group text-blue-1">
+              <label
+                className="rounded-left flex items-center relative "
+                onClick={(e) => {
+                  setFormData((prev) => ({ ...prev, budget: "30" }));
+                }}
+              >
+                <div className="mx-auto custom-label">
+                  <span>&lt;30 Lacs</span>
+                </div>
+              </label>
+              <label
+                className="flex items-center"
+                onClick={(e) => {
+                  setFormData((prev) => ({ ...prev, budget: "30 - 60" }));
+                }}
+              >
+                <div className="mx-auto custom-label">
+                  <span>30 - 60 Lacs</span>
+                </div>
+              </label>
+              <label
+                className="rounded-right flex items-center"
+                onClick={(e) => {
+                  setFormData((prev) => ({ ...prev, budget: "60+" }));
+                }}
+              >
+                <div className="mx-auto custom-label">
+                  <span>60+ Lacs</span>
+                </div>
+              </label>
             </div>
           </div>
-        </div>
+
+          {/* Button */}
+          <div className="col-span-full md:col-span-4">
+            <PrimaryButton
+              label="Submit"
+              className={cn("w-full")}
+              onClick={handleSubmit}
+              loading={loading}
+            />
+          </div>
+        </form>
       </div>
     </section>
   );
