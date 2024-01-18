@@ -24,18 +24,23 @@ const InvestmentJourney: React.FC = () => {
         </div>
       </div>
       {/* Information Section */}
-      <div className="bg-white w-full container mx-auto max-w-7xl rounded-2xl text-black mt-8 lg:mt-16 md:mt-8 p-8 lg:p-10 overflow-x-auto">
-        <div className="relative flex justify-between items-baseline gap-10 overflow-y-hidden overflow-x-auto">
+      <div className="bg-white w-full container mx-auto max-w-7xl rounded-2xl text-black mt-8 lg:mt-16 md:mt-8 p-8 lg:p-10 overflow-x-auto relative">
+        {/* Pogress Bar */}
+        <div className="absolute bottom-[5rem] md:left-12 lg:left-16 md:bottom-20 lg:bottom-24 w-[90%] mx-auto h-1 bg-gray-500 flex justify-start items-center z-1">
+          <div className="h-4 w-4 bg-orange-1 rounded-full " />
+        </div>
+
+        <div className="relative flex lg:justify-between items-baseline gap-10 overflow-y-hidden overflow-x-auto journey-container">
           {/* Item 1 */}
-          <div className="flex flex-col  gap-2 lg:gap-12 max-w-56">
-            <Image src={J1} alt="" className="w-[56rem] bg-blue-500" />
+          <div className="flex flex-col gap-5 lg:gap-12 min-w-[150px] ">
+            <Image src={J1} alt="" className="w-full bg-blue-500" />
             <div className="text-center text-sm text-gray-1">
               Invested 35 Lacs 2019
             </div>
           </div>
 
           {/* Item 2 */}
-          <div className="flex flex-col gap-2 lg:gap-12 max-w-56">
+          <div className="flex flex-col gap-5 lg:gap-12  min-w-[150px] ">
             <Image src={J2} alt="" className="bg-blue-500 w-[56rem]" />
             <div className="text-center text-sm text-gray-1">
               At possession 50 Lacs
@@ -43,7 +48,7 @@ const InvestmentJourney: React.FC = () => {
           </div>
 
           {/* Item 3 */}
-          <div className="flex flex-col gap-2 lg:gap-12 max-w-56">
+          <div className="flex flex-col gap-5 lg:gap-12  min-w-[150px] ">
             <Image src={J3} alt="" className="bg-blue-500 w-[56rem]" />
             <div className="text-center text-sm text-gray-1">
               After 3 years Liquidate 60 Lacs
@@ -51,7 +56,7 @@ const InvestmentJourney: React.FC = () => {
           </div>
 
           {/* Item 4 */}
-          <div className="flex flex-col gap-2 lg:gap-12 max-w-56">
+          <div className="flex flex-col gap-5 lg:gap-12  min-w-[150px] ">
             <Image src={J4} alt="" className="w-[56rem] bg-blue-500" />
             <div className="text-center text-sm text-gray-1">ROI 23%</div>
           </div>

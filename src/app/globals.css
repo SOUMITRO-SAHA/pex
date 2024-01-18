@@ -77,6 +77,16 @@ body {
   .social-message > div {
     height: 4rem;
   }
+  .journey-container > div {
+    width: 400px;
+  }
+
+  @media (max-width: 767px) {
+    .journey-container {
+      overflow-x: scroll;
+      flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    }
+  }
 
   @keyframes waveAnimation {
     0% {

@@ -18,7 +18,7 @@ const TheWhy: React.FC<TheWhyProps> = () => {
         </div>
 
         <div className="lg:container lg:mx-auto lg:max-w-7xl">
-          <div className="bg-orange-1 bg-opacity-10 rounded-2xl mt-8 lg:mt-12 w-full  mx-auto max-w-7xl">
+          <div className="bg-orange-1 bg-opacity-10 rounded-2xl mt-8 lg:mt-12 w-full  mx-auto max-w-7xl lg:p-10">
             <div className="grid grid-cols-12 md:justify-normal gap-2 md:gap-10 p-1 py-2">
               {whyReasonArray?.map(({ id, icon, title, subtitle }) => (
                 <TheWhyCard
