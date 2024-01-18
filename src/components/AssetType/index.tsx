@@ -1,18 +1,12 @@
 "use client";
 import PrimaryButton from "@/common/Button";
 import InputBox from "@/common/Input/InputBox.Component";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React, { useState } from "react";
-import {
-  Office,
-  OfficeLarge1,
-  Rent,
-  RentalLarge1,
-} from "../../../public/images";
-import AssetTypeCard from "./AssetTypeCard.Component";
 import { EmailOptions, sendQuickMail } from "@/lib/mail_sender";
+import { cn } from "@/lib/utils";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { Office, Rent } from "../../../public/images";
+import AssetTypeCard from "./AssetTypeCard.Component";
 
 export interface FormDataType {
   name: string;
@@ -82,7 +76,7 @@ const AssetType: React.FC = () => {
         {/* Form */}
         <form className="order-2 md:order-none col-span-full grid grid-cols-12 gap-5 md:gap-10 md:col-span-6 overflow-hidden text-sm md:text-base">
           {/* Name */}
-          <div className="col-span-full flex flex-col">
+          <div className="col-span-full lg:col-span-4 flex flex-col">
             <div>Name</div>
             <InputBox
               type="text"
@@ -94,7 +88,7 @@ const AssetType: React.FC = () => {
           </div>
 
           {/* Phone Number */}
-          <div className="col-span-full md:col-span-6">
+          <div className="col-span-full lg:col-span-4">
             <div>Phone Number</div>
             <InputBox
               type="text"
@@ -106,11 +100,11 @@ const AssetType: React.FC = () => {
           </div>
 
           {/* Budget */}
-          <div className="col-span-full md:col-span-6 flex flex-col gap-1">
+          <div className="col-span-full lg:col-span-4 flex flex-col gap-1">
             <div>Budget</div>
             <div className="border-gray-500 radio-group text-blue-1">
               <label
-                className="rounded-left flex items-center relative "
+                className="rounded-left border-r flex items-center relative "
                 onClick={(e) => {
                   setFormData((prev) => ({ ...prev, budget: "30" }));
                 }}
@@ -130,7 +124,7 @@ const AssetType: React.FC = () => {
                 </div>
               </label>
               <label
-                className="rounded-right flex items-center"
+                className="rounded-right border-l flex items-center"
                 onClick={(e) => {
                   setFormData((prev) => ({ ...prev, budget: "60+" }));
                 }}

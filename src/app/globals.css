@@ -58,7 +58,10 @@ body {
   .radio-group > label {
     width: 100%;
     cursor: pointer;
-    @apply min-h-[2.625rem] bg-white;
+    @apply min-h-[2.625rem] border-gray-300  bg-white;
+  }
+  .radio-group > label:hover {
+    @apply bg-gray-200;
   }
 
   .rounded-left {
