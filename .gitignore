@@ -38,3 +38,7 @@ next-env.d.ts
 # Local
 /static
 /types
+
+# Extra
+pex.zip
+*.zip
