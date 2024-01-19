@@ -8,7 +8,7 @@ const Popup: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
-    }, 1000);
+    }, 10000);
   }, []);
 
   return (

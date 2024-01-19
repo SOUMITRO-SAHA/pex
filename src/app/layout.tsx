@@ -21,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "debug-screens")}>
+      {/* TODO: add this to see the debug screen "debug-screens" */}
+      <body className={cn(inter.className)}>
         <main id="portal-container"></main>
         {/* Header */}
         <Navbar />
