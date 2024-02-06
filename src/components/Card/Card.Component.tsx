@@ -14,6 +14,15 @@ const Card: React.FC<CardProps> = ({
   message,
   className,
 }) => {
+  const renderIcon = (icon: string) => {
+    return (
+      <Image
+        src={icon}
+        alt={specialMessage + "__icon"}
+        className={cn("w-6 h-6 sm:w-12 sm:h-12 lg:w-20  lg:h-20")}
+      />
+    );
+  };
   return (
     <div
       key={id}
@@ -23,13 +32,7 @@ const Card: React.FC<CardProps> = ({
       )}
     >
       {specialMessage && <div>{specialMessage}</div>}
-      <div>
-        <Image
-          src={icon}
-          alt={specialMessage + "__icon"}
-          className={cn("w-6 h-6 sm:w-12 sm:h-12 lg:w-20  lg:h-20")}
-        />
-      </div>
+      <div>{renderIcon(icon)}</div>
 
       <div className="text-xs md:text-base lg:text-xl font-bold">{message}</div>
     </div>
