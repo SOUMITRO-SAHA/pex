@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 import { IconType } from "react-icons";
 import {
   FaChartLine,
@@ -10,12 +9,7 @@ import {
   FaKey,
   FaSignOutAlt,
 } from "react-icons/fa";
-import {
-  ApartmentIcon,
-  BrandIcon,
-  DealIcon,
-  IntellectualPropertyIcon,
-} from "../../public/images";
+import { Card1, Card2, Card3, Card4 } from "../../public/info-card-icon";
 
 export const brandName = "PEX";
 export const phoneNumber = 9832098320;
@@ -24,32 +18,32 @@ export const email = "pex@gmail.com";
 export interface CardItem {
   id: number;
   specialMessage: string;
-  icon: string | StaticImageData;
+  icon: any;
   message: string;
 }
 export const cardContant: CardItem[] = [
   {
     id: 1,
     specialMessage: "",
-    icon: DealIcon,
+    icon: Card1,
     message: "250+ Pre-Leased Properties",
   },
   {
     id: 2,
     specialMessage: "",
-    icon: BrandIcon,
+    icon: Card2,
     message: "50+ Operational Brands",
   },
   {
     id: 3,
     specialMessage: "",
-    icon: IntellectualPropertyIcon,
+    icon: Card3,
     message: "15 Year Lease Signed",
   },
   {
     id: 4,
     specialMessage: "",
-    icon: ApartmentIcon,
+    icon: Card4,
     message: "Premium Retail Spaces",
   },
 ];
