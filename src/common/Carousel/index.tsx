@@ -1,7 +1,5 @@
 "use client";
 import { CarouselOptionsType } from "@/assets/constant";
-import Autoplay from "embla-carousel-autoplay";
-import ImageCarousel from "@/components/PropertyCard/ImageCarousel";
 import {
   Carousel,
   CarouselContent,
@@ -9,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { title } from "process";
+import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 
 interface MainCarouselProps {
@@ -41,7 +39,7 @@ const MainCarousel: React.FC<MainCarouselProps> = ({ options }) => {
                 {/* Image Container */}
                 <div className="flex flex-col justify-between items-center h-full">
                   <div className="overflow-hidden object-contain">
-                    <ImageCarousel images={[image1, image2]} title={title} />
+                    {/* <ImageCarousel images={[image1, image2]} title={title} /> */}
                   </div>
                   <h3 className="text-base md:text-lg lg:text-2xl text-white font-bold">
                     {name}
