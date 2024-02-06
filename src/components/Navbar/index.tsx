@@ -23,7 +23,14 @@ const Navbar: React.FC = () => {
         <section className={cn("container mx-auto max-w-7xl h-full")}>
           <div className="flex items-center justify-between h-full">
             {/* Brand Logo */}
-            <div className="text-2xl font-bold">PEX</div>
+            <div className="text-2xl font-bold w-[150px] overflow-hidden">
+              <Image
+                src={"/PEXLogo.png"}
+                alt={"pex logo"}
+                width={200}
+                height={100}
+              />
+            </div>
 
             {/* Button
             <div className="w-[120px] sm:w-[150px] md:w-[180px]">

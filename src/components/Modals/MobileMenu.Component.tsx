@@ -2,6 +2,7 @@ import PrimaryButton from "@/common/Button";
 import CrossButton from "@/common/Button/CrossButton.Component";
 import InputBox from "@/common/Input/InputBox.Component";
 import { sendQuickMail } from "@/lib/mail_sender";
+import Image from "next/image";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { toast } from "react-toastify";
@@ -66,8 +67,18 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
       </div>
 
       {/* Give a Quick Connect Form */}
-      <div className="mt-8 my-6 flex flex-col gap-10 text-white">
-        <div className="flex flex-col gap-5">
+
+      <div className="mt-8 my-6 flex flex-col gap-10 text-white w-[75%]">
+        <div className="flex justify-center items-center">
+          <Image
+            src={"/favicon.jpg"}
+            alt={"pex-logo-small"}
+            width={100}
+            height={100}
+          />
+        </div>
+
+        <div className="flex flex-col gap-5 w-full">
           {/* Name */}
           <div>
             <div>Name</div>
